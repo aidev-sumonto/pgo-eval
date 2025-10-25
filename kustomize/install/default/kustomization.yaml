@@ -15,6 +15,7 @@ labels:
 
 resources:
 - ../crd
+- ../namespace
 - ../rbac/cluster
 - ../manager
 
