@@ -10,6 +10,7 @@ spec:
   subject:
     organizations:
     - hippo-org
+    - istio-system
   # The use of the common name field has been deprecated since 2000 and is
   # discouraged from being used.
   commonName: _crunchyrepl

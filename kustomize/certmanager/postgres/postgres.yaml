@@ -2,14 +2,24 @@ apiVersion: postgres-operator.crunchydata.com/v1beta1
 kind: PostgresCluster
 metadata:
   name: hippo
+  annotations:
+    postgres-operator.crunchydata.com/autoCreateUserSchema: "true"
 spec:
   postgresVersion: 17
+  users:
+    - name: hippo
+      databases:
+        - zoo
+    - name: admin
+      databases:
+        - db1
   customReplicationTLSSecret:
     name: hippo-repl-tls
   customTLSSecret:
     name: hippo-tls
   instances:
     - replicas: 2
+      name: pg-db1
       dataVolumeClaimSpec:
         accessModes:
         - "ReadWriteOnce"

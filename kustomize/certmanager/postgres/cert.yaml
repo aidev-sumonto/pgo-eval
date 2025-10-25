@@ -10,9 +10,10 @@ spec:
   subject:
     organizations:
     - hippo-org
+    - istio-system
   # The use of the common name field has been deprecated since 2000 and is
   # discouraged from being used.
-  commonName: hippo-primary
+  # commonName: hippo-primary
   isCA: false
   privateKey:
     algorithm: ECDSA
